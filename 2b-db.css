@@ -1,0 +1,7 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(5, minmax(100px, auto));
+  gap: 7px 7px;
+  grid-template-areas: "contacts contacts contacts empty" "contacts contacts contacts drps-con" "announcements info materials havesay" "library timetabling assessment faq" "announcements empty empty empty";
+}
