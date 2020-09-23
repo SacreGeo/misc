@@ -1,7 +1,114 @@
+/*  */
+/* GRID CONTAINER */
+/*  */
+
+.grid-container { min-height: 100px; max-width: 850px}
+
+.grid-container a, .grid-container p, .grid-container h1, .grid-container h2, .grid-container h3, .grid-container h4{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: repeat(5, minmax(100px, auto));
   gap: 7px 7px;
   grid-template-areas: "contacts contacts contacts empty" "contacts contacts contacts drps-con" "announcements info materials havesay" "library timetabling assessment faq" "announcements empty empty empty";
+}
+
+/*  */
+/* COLOURS OF GRID AREAS */
+/*  */
+.contacts { grid-area: contacts;
+background-color: #FEFEEE; }
+.announcements { grid-area: announcements;
+background-color: #FA5D5F}
+.info { grid-area: info;
+background-color: #2B9EB3;}
+.materials { grid-area: materials;
+background-color: #44AF69; }
+.havesay { grid-area: havesay;
+background-color: #83BAB4;}
+.library{ grid-area: library;
+background-color: #cce5d6;}
+.assessment { grid-area: assessment;
+background-color: #FCAB10;}
+.timetabling { grid-area: timetabling;
+background-color: #83BAB4;}
+.faq { grid-area: faq;
+background-color: #2B9EB3;}
+/* There is an empty grid area to make sure DRPS boxes don't shift to the top */
+.empty{grid-area: empty; }
+
+/* The DRPS areas are within their own container */
+.drps-con{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 5px;
+    grid-template-areas: "drps1 drps2" 
+}
+.drps1 { grid-area: drps1;
+background-color: #cce5d6;}
+.drps2 { grid-area: drps2;
+background-color: #cce5d6;}
+
+
+/*  */
+/* GRID AREA CONTENT */
+/*  */
+/* alignment, colors font size etc */
+.announcements, .info, .materials, .havesay, .library, .assessment, .timetabling, .faq, .drps1, .drps2{
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+/* ICONS  */
+.announcements i, .info i, .materials i, .havesay i, .library i, .assessment i, .timetabling i, .faq i, .drps1 i, .drps2 i{
+    margin: 10px;
+}
+
+/*  */
+/* CONTACT BOX */
+/* this has two columns (.cont-col) of text */
+.contacts{
+  text-align: left;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.cont-col{
+    width: 40%;
+    display:inline-block;
+    margin: 15px;
+    vertical-align: top;
+}
+
+
+/* FOR MOBILE DEVICES */
+/* 1 column for mobile */
+
+@media only screen and (max-width: 736px){
+  .grid-container {
+    width: auto;
+    padding-left: 2.5% !important;
+    padding-right: 2.5% !important;
+    grid-template-columns: 1fr !important;
+    grid-auto-rows: min-content !important;
+    gap: 7px 7px !important;
+    grid-template-areas: "contacts" "contacts" "announcements" "info" "materials" "havesay" "library" "timetabling" "assessment" "faq" "drps-con" !important;
+  }
+  .cont-col{
+    width: auto;
+    display:block !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+/* don't display empty when mobile   */
+  .empty{
+      display: none;
+  }
 }
