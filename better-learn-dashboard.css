@@ -1,0 +1,62 @@
+.container {
+	width:100%;
+	padding: 1em 0;
+}
+
+.contacts{
+	background:#FEFEEE;
+	border-radius: 7px;
+}
+
+.course-staff-info {
+	padding: 15px !important;
+}
+
+.staff-role {
+	font-weight: bold;
+	font-size:1.17em;
+	margin-bottom: 1em;
+}
+
+.em {
+	margin-bottom:1.8em;
+}
+
+.no-padding {
+	padding: 0px !important;
+}
+
+.button {
+	color: black;
+	background: rgb(207,231,214);
+	padding: 1.5em 0;
+	border: 2px white solid;
+	text-align: center;
+	border-radius: 7px;
+	text-decoration: underline;
+	display: block;
+}
+
+.button:hover {
+	color: black;
+}
+
+.small-button {
+	padding: 1em 0;
+}
+
+i {
+	font-size: 25px;
+	margin-bottom: 0.5em;
+}
+
+.bg-1  {background: #D71E24;}
+.bg-2  {background: #EC4F64;}
+.bg-3  {background: #9D60FF;}
+.bg-4  {background: #4480F1;}
+.bg-5  {background: #4D9FE3;}
+.bg-6  {background: #A6B447;}
+.bg-7  {background: #D3D044;}
+.bg-8  {background: #FFC940;}
+.bg-9  {background: #FFA849;}
+.bg-10 {background: #DD8D00;}
